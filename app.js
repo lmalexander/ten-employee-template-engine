@@ -1,7 +1,9 @@
+// dependencies
 const inquirer = require("inquirer");
 const jest = require("jest");
+const fs = require("fs");
 
-// prompt user for name, email, id, and school(intern) or github username(engineer and manager)
+// prompt user for name, email, id, and school(intern) / github username(engineer) / office number (manager)
 function promptUser() {
     return inquirer.prompt([
         { // 1
@@ -55,6 +57,10 @@ function promptUser() {
     console.log(github);
 });
 }
-// dynamically create html using variables to be written to output/team.html
+
+// dynamically create html using variables to be written to index.html
+// if (role), return html & append to index.html
+
+
 // function calls
 promptUser();
